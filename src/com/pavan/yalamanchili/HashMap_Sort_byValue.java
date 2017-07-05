@@ -55,6 +55,11 @@ Map<String, Person> map = new HashMap<>();
 		for (Entry<String, Person> entry : list) {
 			System.out.println("Key-->"+entry.getKey()+"  Value-->"+entry.getValue().getFirstName());
 		}
+		
+		/*
+		 * This is for the Reverse sorting 
+		 * return (-o1.getValue().getFirstName().compareTo(o2.getValue().getFirstName()));
+		 * */
 	}
 
 }
