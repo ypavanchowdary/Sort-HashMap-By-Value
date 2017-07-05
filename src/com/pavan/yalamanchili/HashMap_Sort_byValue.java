@@ -3,6 +3,8 @@
  */
 package com.pavan.yalamanchili;
 
+
+
 /**
  * @author ypava
  *
@@ -14,6 +16,39 @@ public class HashMap_Sort_byValue {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+Map<String, Person> map = new HashMap<>();
+		
+		Person person = new Person();
+		person.setFirstName("C");
+		map.put("person1", person);
+ 
+		person = new Person();
+		person.setFirstName("B");
+		map.put("person2", person);
+		
+		person = new Person();
+		person.setFirstName("A");
+		map.put("person3", person);
+		
+		Set<Entry<String, Person>> set = map.entrySet();
+		
+		List<Entry<String, Person>> list = new ArrayList<Map.Entry<String,Person>>(set);
+		
+		Collections.sort(list, new Comparator<Entry<String, Person>>() {
+ 
+			@Override
+			public int compare(Entry<String, Person> o1, Entry<String, Person> o2) {
+				
+				return (o1.getValue().getFirstName().compareTo(o2.getValue().getFirstName()));
+			}
+		});
+		
+		for (Entry<String, Person> entry : list) {
+			System.out.println("Key-->"+entry.getKey()+"  Value-->"+entry.getValue().getFirstName());
+		
+		
 
 	}
 
