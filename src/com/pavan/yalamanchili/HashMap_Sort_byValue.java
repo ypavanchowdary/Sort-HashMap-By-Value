@@ -9,7 +9,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 /**
@@ -48,15 +47,13 @@ Map<String, Person> map = new HashMap<>();
 			@Override
 			public int compare(Entry<String, Person> o1, Entry<String, Person> o2) {
 				
-				return (o1.getValue().getFirstName().compareTo(o2.getValue().getFirstName()));
+				return (-o1.getValue().getFirstName().compareTo(o2.getValue().getFirstName()));
 			}
 		});
 		
 		for (Entry<String, Person> entry : list) {
 			System.out.println("Key-->"+entry.getKey()+"  Value-->"+entry.getValue().getFirstName());
-		
-		
-
+		}
 	}
 
 }
