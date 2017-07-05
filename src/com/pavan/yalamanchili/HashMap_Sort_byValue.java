@@ -48,7 +48,7 @@ Map<String, Person> map = new HashMap<>();
 			@Override
 			public int compare(Entry<String, Person> o1, Entry<String, Person> o2) {
 				
-				return (-o1.getValue().getFirstName().compareTo(o2.getValue().getFirstName()));
+				return (o1.getValue().getFirstName().compareTo(o2.getValue().getFirstName()));
 			}
 		});
 		
